@@ -7,7 +7,7 @@ services:
     volumes:
       - db_data:/var/lib/mysql
     restart: unless-stopped
-    env_file: ./.env                                        # Environment file with settings
+    env_file: ./stack.env                                        # Environment file with settings
     networks:
       - leantime-net
     command: --character-set-server=UTF8MB4 --collation-server=UTF8MB4_unicode_ci
@@ -16,7 +16,7 @@ services:
     image: leantime/leantime:latest
     container_name: leantime
     restart: unless-stopped
-    env_file: ./.env                                        # Environment file with settings
+    env_file: ./stack.env                                        # Environment file with settings
     networks:
       - leantime-net
     volumes:
